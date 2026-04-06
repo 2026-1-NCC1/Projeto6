@@ -2,11 +2,16 @@ using UnityEngine;
 
 public class SelecionaMonitor : MonoBehaviour
 {
-    //variáveis para alteração da renderização do objeto
+    //variaveis para alteração da renderização do objeto
     public GameObject textMesh;
     public MeshRenderer screenRenderer;
     public Material emissiveMaterial;
     public Material normalMaterial;
+
+    //variaveis para resposta do clique, utiliza a classe
+    //CondicaoTexto para definir a mensagem de resposta
+    public CondicaoTexto resposta;
+    private string mensagem;
 
     private bool isOn = false;
 
@@ -16,7 +21,7 @@ public class SelecionaMonitor : MonoBehaviour
         TurnOffComputer();
     }
 
-    //ligar ou desligar o monitor quando o jogador clicar nele
+    // ligar ou desligar o monitor quando o jogador clicar nele
     private void OnMouseDown()
     {
         if (isOn)
@@ -27,7 +32,9 @@ public class SelecionaMonitor : MonoBehaviour
 
     private void TurnOnComputer()
     {
-        // altera o a renderização do monitor para ativo
+        mensagem = "O computador está bloqueado";
+
+        // altera a renderização do monitor para ativo
         if (screenRenderer != null && emissiveMaterial != null)
         {
             Material[] mats = screenRenderer.materials;
@@ -36,13 +43,23 @@ public class SelecionaMonitor : MonoBehaviour
         }
 
         if (textMesh != null)
+        {
             textMesh.SetActive(true);
+        }
+
+        // exibe a mensagem de resposta
+        if (resposta != null)
+        {
+            resposta.DefineMensagem(mensagem);
+        }
 
         isOn = true;
     }
 
     private void TurnOffComputer()
     {
+        mensagem = null;
+
         // altera a renderização do monitor para inativo
         if (screenRenderer != null && normalMaterial != null)
         {
@@ -52,7 +69,15 @@ public class SelecionaMonitor : MonoBehaviour
         }
 
         if (textMesh != null)
+        {
             textMesh.SetActive(false);
+        }
+
+        // retira a mensagem de resposta
+        if (resposta != null)
+        {
+            resposta.DefineMensagem(mensagem);
+        }
 
         isOn = false;
     }
