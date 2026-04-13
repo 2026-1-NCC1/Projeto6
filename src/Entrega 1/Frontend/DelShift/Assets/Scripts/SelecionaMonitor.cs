@@ -13,7 +13,7 @@ public class SelecionaMonitor : MonoBehaviour
     public CondicaoTexto resposta;
     private string mensagem;
 
-    private bool isOn = false;
+    private bool isOn = false; //variável de estado do monitor
 
     private void Start()
     {
