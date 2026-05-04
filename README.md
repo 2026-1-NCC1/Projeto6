@@ -16,60 +16,46 @@
 ## Descrição
 
 <p align="center">
-<img src="https://pix4free.org/assets/library/2021-01-20/originals/game.jpg" alt="Banner DelShift" border="0">
-  Game by <a href="http://www.nyphotographic.com/">Nick Youngson</a> <a rel="license" href="https://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA 3.0</a> <a href="http://pix4free.org/">Pix4free</a>
+<img src="https://github.com/2026-1-NCC1/Projeto6/blob/main/imagens/Apresentacao%20DelShift.png" alt="Banner DelShift" border="0">
+  Game by Ana Clara Silva, Mirelli Pedro, Nathalia Inocêncio e Sabrina Santos
 </p>
 
 
-De um a dois parágrafos sobre o que é seu projeto e o que ele faz.
+DelShift é um jogo digital do gênero Point and Click de investigação forense digital onde o tempo é uma pressão constante. O jogador interage com objetos do cenário selecionando, utilizando e manipulando para resolver desafios e obter pistas sobre o caso. O jogador assume o papel de um perito criminal em uma delegacia e precisa solucionar um caso de chantagem cibernética. A vítima está sendo ameaçada com a criação de conteúdo falso capaz de destruir sua reputação e carreira. Através de mecânicas de investigação forense digital, puzzles e pressão temporal, o jogador deve coletar pistas, resolver desafios e apontar o culpado dentro do prazo.
 <br><br>
-Meu projeto ajuda estudantes FECAP a configurarem seus githubs.
-<br><br>
-May the force be with you!
+O protótipo consiste em exploração, resolução de desafios sob pressão temporal e dedução com consequências narrativas, demonstrando a viabilidade de um jogo de investigação que prioriza o desafio intelectual e a autonomia do jogador.
 <br><br>
 
 ## 🛠 Estrutura de pastas
-
 -Raiz<br>
 |<br>
 |-->documentos<br>
-  &emsp;|-->antigos<br>
-  &emsp;|Documentação.docx<br>
+  &emsp;|-->Entrega 1<br>
+  &emsp;&emsp;|-->Algoritmos e Lógica de Programação<br>
+  &emsp;&emsp;|-->Cálculo I<br>
+  &emsp;&emsp;|-->PI - Jogos Digitais<br>
+  &emsp;&emsp;|-->Ética e Pensamento Computacional<br>
+  &emsp;|-->Entrega 2<br>
+  &emsp;&emsp;|-->Algoritmos e Lógica de Programação<br>
+  &emsp;&emsp;|-->Cálculo I<br>
+  &emsp;&emsp;|-->PI - Jogos Digitais<br>
+  &emsp;&emsp;|-->Ética e Pensamento Computacional<br>
+  &emsp;|Documento - Projeto de Extensão - COM Empresa.docx<br>
 |-->executáveis<br>
   &emsp;|-->windows<br>
-  &emsp;|-->android<br>
-  &emsp;|-->HTML<br>
 |-->imagens<br>
 |-->src<br>
-  &emsp;|-->Backend<br>
-  &emsp;|-->Frontend<br>
+  &emsp;|-->Entrega 1<br>
+  &emsp;&emsp;|-->Backend<br>
+  &emsp;&emsp;|-->Frontend<br>
+  &emsp;&emsp;&emsp;|-->Delshift<br>
+  &emsp;|-->Entrega 2<br>
+  &emsp;&emsp;|-->Backend<br>
+  &emsp;&emsp;|-->Frontend<br>
+  &emsp;&emsp;&emsp;|-->Delshift<br>
 |readme.md<br>
 
-A pasta raiz contem dois arquivos que devem ser alterados:
-
-<b>README.MD</b>: Arquivo que serve como guia e explicação geral sobre seu projeto. O mesmo que você está lendo agora.
-
-Há também 4 pastas que seguem da seguinte forma:
-
-<b>documentos</b>: Toda a documentação estará nesta pasta.
-
-<b>executáveis</b>: Binários e executáveis do projeto devem estar nesta pasta.
-
-<b>imagens</b>: Imagens do sistema
-
-<b>src</b>: Pasta que contém o código fonte.
-
 ## 🛠 Instalação
-
-<b>Android:</b>
-
-Faça o Download do JOGO.apk no seu celular.
-Execute o APK e siga as instruções de seu telefone.
-
-```sh
-Coloque código do prompt de comnando se for necessário
-```
-
 <b>Windows:</b>
 
 Não há instalação! Apenas executável!
@@ -79,24 +65,18 @@ Encontre o JOGO.exe na pasta executáveis e execute-o como qualquer outro progra
 Coloque código do prompt de comnando se for necessário
 ```
 
-<b>HTML:</b>
-
-Não há instalação!
-Encontre o index.html na pasta executáveis e execute-o como uma página WEB (através de algum browser).
-
 ## 💻 Configuração para Desenvolvimento
 
-Descreva como instalar todas as dependências para desenvolvimento e como rodar um test-suite automatizado de algum tipo. Se necessário, faça isso para múltiplas plataformas.
+Você pode explorar o projeto para desenvolvimento a partir da ferramenta Unity.
 
 Para abrir este projeto você necessita das seguintes ferramentas:
 
--<a href="https://godotengine.org/download">GODOT</a>
+- Navegador Unity <a href="https://unity.com/pt/industry">Unity Hub</a><br>
+- Versão compatível do Unity <a href="https://unity.com/pt/industry">Unity 3000.0.38f1</a><br>
+- Microsoft Visual Studio (Disponível para baixar junto do Unity) <a href="https://visualstudio.microsoft.com/pt-br/">Visual Studio</a>
 
-```sh
-make install
-npm test
-Coloque código do prompt de comnando se for necessário
-```
+Baixe a pasta "Delshift" presente <a href="https://github.com/2026-1-NCC1/Projeto6/tree/main/src/Entrega%202/Frontend">nesse caminho</a>.<br>
+Inclua a pasta como um projeto no Unity Hub e abra o projeto utilizando a versão Unity 3000.0.38f1.
 
 ## 📋 Licença/License
 <a href="https://github.com/2026-1-NCC1/Projeto6">DelShift</a> © 2026 by <a href="https://github.com/sabs-nascimento">Ana Clara Silva; Mirelli Pedro; Nathalia Inocêncio; Sabrina Santos</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
@@ -105,9 +85,10 @@ Coloque código do prompt de comnando se for necessário
 
 Aqui estão as referências usadas no projeto.
 
-1. <https://github.com/iuricode/readme-template>
-2. <https://github.com/gabrieldejesus/readme-model>
-3. <https://chooser-beta.creativecommons.org/>
-4. <https://freesound.org/>
-5. <https://www.toptal.com/developers/gitignore>
-6. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
+1. SCHELL, Jesse. A arte de game design: o livro original. São Paulo: Elsevier, 2011.
+2. SALEN, Katie; ZIMMERMAN, Eric. Rules of Play: Game Design Fundamentals. Cambridge: MIT Press, 2004.
+3. DELLA VECCHIA, Evandro. Perícia Digital: da investigação à análise forense. 3. ed. Campinas: Millennium Editora, 2025.
+4. SILVA, Mateus de Oliveira et al. Deepfake: a evolução das fake news. Research, Society and Development, v. 11, n. 2, 2022.
+5. <https://docs.unity.com/en-us>
+6. <https://github.com/fecaphub/Portfolio>
+7. Músicas por: <a href="https://freesound.org/people/DaveJf/sounds/616544/"> DaveJf </a> e <a href="https://freesound.org/people/DRFX/sounds/338986/"> DRFX </a> ambas com Licença CC 0.
