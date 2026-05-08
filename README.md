@@ -79,7 +79,7 @@ Baixe a pasta "Delshift" presente <a href="https://github.com/2026-1-NCC1/Projet
 Inclua a pasta como um projeto no Unity Hub e abra o projeto utilizando a versão Unity 3000.0.38f1.
 
 ## 📋 Licença/License
-<a href="https://github.com/2026-1-NCC1/Projeto6">DelShift</a> © 2026 by <a href="https://github.com/sabs-nascimento">Ana Clara Silva; Mirelli Pedro; Nathalia Inocêncio; Sabrina Santos</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
+<a href="https://github.com/2026-1-NCC1/Projeto6">DelShift</a> © 2026 by <a href="https://github.com/fecaphub">Ana Clara Silva; Mirelli Pedro; Nathalia Inocêncio; Sabrina Santos; FECAP</a> is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">
 
 ## 🎓 Referências
 
