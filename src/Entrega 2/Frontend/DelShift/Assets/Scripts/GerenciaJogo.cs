@@ -6,6 +6,8 @@ public class GerenciaJogo : MonoBehaviour
 {
     public static GerenciaJogo instancia; // Instância script para acesso global
 
+    public int pistas = 0;
+
     // Variaveis para controle do tempo
     public float tempoTotal = 300f;
     private float tempoRestante;
@@ -52,6 +54,25 @@ public class GerenciaJogo : MonoBehaviour
             jogoAtivo = false;
             GameOver();
         }
+    }
+
+    // Método para coletar pistas, incrementa o contador de pistas
+    public void ColetaPistas()
+    {
+        pistas++;
+    }
+
+    // Ajusta multiplicador para vantagem ou desvantagem após conlcuir um desafio
+    public void ConcluirDesafio(float tLimite, float tUsado)
+    {
+        if (tUsado < tLimite * 0.5f)
+        {
+            multiplicador *= 0.9f;
+        } else if (tUsado > tLimite)
+        {
+            multiplicador *= 1.2f;
+        }
+
     }
 
     private void GameOver()
