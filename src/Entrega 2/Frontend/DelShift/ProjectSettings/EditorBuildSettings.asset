@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Scenes/MenuInicial.unity
     guid: 4aad7b2605b9e3f4f9d91e23a83f3b7f
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/GameOver.unity
     guid: 99c9720ab356a0642a771bea13969a05
   - enabled: 1
     path: Assets/Scenes/CenaPrincipal.unity
@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FasePuzzleAudio.unity
     guid: 44662e7e424b56d4ba4324a8213a47f3
+  - enabled: 1
+    path: Assets/Scenes/Introducao.unity
+    guid: 5db4908b982946e4292d73b852b45e2b
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

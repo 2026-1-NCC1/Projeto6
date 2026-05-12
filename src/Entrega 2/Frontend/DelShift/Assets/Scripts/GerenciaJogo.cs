@@ -1,12 +1,16 @@
 using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class GerenciaJogo : MonoBehaviour
 {
     public static GerenciaJogo instancia; // Instância script para acesso global
 
     public int pistas = 0;
+    public int totalPistas = 3;
+    public int desafiosConcluidos = 0;
+    public int totalDesafios = 1;
 
     // Variaveis para controle do tempo
     public float tempoTotal = 300f;
@@ -40,7 +44,6 @@ public class GerenciaJogo : MonoBehaviour
             AtualizaTempo();
         }
     }
-
     // Atualiza contagem de tempo e verifica se ele acabou
     private void AtualizaTempo()
     {
@@ -68,11 +71,19 @@ public class GerenciaJogo : MonoBehaviour
         if (tUsado < tLimite * 0.5f)
         {
             multiplicador *= 0.9f;
+            pistas++;
         } else if (tUsado > tLimite)
         {
             multiplicador *= 1.2f;
         }
+        desafiosConcluidos++;
+    }
 
+    // Carrega fim de jogo sem término de tempo
+    public void FimDeJogo()
+    {
+        jogoAtivo = false;
+        SceneManager.LoadScene("GameOver");
     }
 
     private void GameOver()

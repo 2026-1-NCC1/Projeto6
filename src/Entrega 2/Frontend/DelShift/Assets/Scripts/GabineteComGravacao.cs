@@ -6,6 +6,7 @@ public class GabineteComGravacao : MonoBehaviour
     public CondicaoTexto resposta;
     private string mensagem;
     private int pistaColetada = 0;
+    private bool visto = false;
 
     void Update()
     {
@@ -14,10 +15,11 @@ public class GabineteComGravacao : MonoBehaviour
         {
             Interacao();
         }
-        else if (Input.GetMouseButtonDown(0) && pistaColetada == 1)
+        else if (!JogadorPerto && visto)
         {
             mensagem = null;
             resposta.DefineMensagem(mensagem);
+            visto = false;
         }
         
     }
@@ -56,5 +58,6 @@ public class GabineteComGravacao : MonoBehaviour
             mensagem = "Não há mais nada aqui";
             resposta.DefineMensagem(mensagem);
         }
+        visto = true;
     }
 }

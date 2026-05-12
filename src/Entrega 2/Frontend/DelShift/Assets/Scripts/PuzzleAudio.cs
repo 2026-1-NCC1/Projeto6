@@ -9,8 +9,11 @@ public class PuzzleAudio : MonoBehaviour
 {
     // Variavel para manipular o audio
     public AudioSource audioChantagem;
+    public AudioSource audioVoz;
     private float pitchCerto;
     public Slider pitchSlider;
+    public Slider volumeSlider;
+    private float volumeCerto;
 
     // Variaveis para controle do tempo e vantagem do jogador
     public float tempoLimite = 30f;
@@ -20,19 +23,28 @@ public class PuzzleAudio : MonoBehaviour
     public TMP_Text tempoRestante;
 
     public Button botaoAvancar;
+    public Button botaoPista;
+    private bool ajustePitch = false;
+    private bool ajusteVolume = false;
 
     void Start()
     {
         // Define o valor a ser encontrado no slider,
         // os limites do slider e o valor inicial do pitch do audio
         pitchCerto = Random.Range(0.5f, 1.5f);
-        Debug.Log("Valor a ser encontrado: " + pitchCerto);
+        //Debug.Log("Valor a ser encontrado: " + pitchCerto);
         pitchSlider.minValue = Random.Range(-2.0f, pitchCerto - 0.5f);
         pitchSlider.maxValue = Random.Range(pitchCerto + 0.5f, 3f);
+        volumeCerto = Random.Range(0.5f, 1.0f);
+        volumeSlider.minValue = Random.Range(0.0f, 0.5f);
+        volumeSlider.maxValue = Random.Range(volumeCerto + 0.5f, 2.0f);
+        volumeSlider.maxValue = Random.Range(volumeCerto + 0.5f, 2.0f);
         audioChantagem.pitch = Random.Range(-1.0f, 3.0f);
+        audioVoz.volume = Random.Range(0.0f, 1.0f);
 
         tempoRestantePuzzle = tempoLimite;
         botaoAvancar.gameObject.SetActive(false);
+        botaoPista.gameObject.SetActive(false);
 
     }
 
@@ -53,12 +65,25 @@ public class PuzzleAudio : MonoBehaviour
             textoInformativo.SetActive(false);
             textoTempoPuzzle.text = "Atividade Detectada!\nTempo Limite da chantagem pode ser alterado.";
         }
+
+        if (ajustePitch && ajusteVolume)
+        {
+            Debug.Log("Ajustes alcançados!");
+            audioVoz.Stop();
+            audioChantagem.Stop();
+            botaoAvancar.gameObject.SetActive(true);
+        }
     }
 
     // Recebe o valor do slider sempre que ele for alterado e ajusta o pitch do audio
     public void AjustaPitch(float valor)
     {
         audioChantagem.pitch = valor;
+    }
+
+    public void AjustaVolume(float valor)
+    {
+        audioChantagem.volume = valor;
     }
 
     // Verifica se o valor do slider está dentro da faixa correta para o puzzle
@@ -69,7 +94,17 @@ public class PuzzleAudio : MonoBehaviour
         {
             audioChantagem.pitch = 1f;
             pitchSlider.interactable = false;
-            botaoAvancar.gameObject.SetActive(true);
+            ajustePitch = true;
+        }
+    }
+
+    public void VerificaVolume()
+    {
+        if (volumeSlider.value < volumeCerto + 0.02f && volumeSlider.value > volumeCerto - 0.02f)
+        {
+            audioVoz.volume = 1f;
+            volumeSlider.interactable = false;
+            ajusteVolume = true;
         }
     }
 
@@ -99,7 +134,13 @@ public class PuzzleAudio : MonoBehaviour
     public void ConcluirPuzzle()
     {
         GerenciaJogo.instancia.ConcluirDesafio(tempoLimite, tempoLimite - tempoRestantePuzzle);
+        botaoPista.gameObject.SetActive(true);
         Debug.Log("Puzzle concluído! Avançando para a próxima etapa.");
+    }
+
+    public void FinalizaJogo()
+    {
+        GerenciaJogo.instancia.FimDeJogo();
     }
 
     }
